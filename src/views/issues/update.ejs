@@ -1,0 +1,20 @@
+<h1>Update issue</h1>
+<form class="row g-3" method="post" action="./issues/<%= viewData?.gitlabIid %>/update">
+  <div class="col-md-12">
+    <label class="form-label" for="titleInput">
+      Title
+    </label>
+    <input type="text" class="form-control" id="titleInput" name="title" placeholder="Update issue title here" value="<%= viewData?.title %>" required="required" autofocus="autofocus" />
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="doneCheck" name="done" <% if (viewData?.done) { %> checked <% } %> />
+        <label class="form-check-label" for="doneCheck">
+          Done
+        </label>
+    </div>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Update</button>
+  </div>
+</form>
